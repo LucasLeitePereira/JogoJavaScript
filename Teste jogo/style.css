@@ -1,0 +1,21 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 90%;
+    margin: 10px;
+    height: 500px;
+    border: 1px solid #333;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.personagem {
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+}
