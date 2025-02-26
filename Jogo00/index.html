@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <canvas id="meu_canvas" width="500" height="500"></canvas>
+
+    <script>
+        window.onload = function () {
+            // Aqui trabalharemos com o Canvas
+
+            var canvas = document.getElementById("meu_canvas");
+
+            var context = canvas.getContext('2d');
+            // context.fillRect(50, 50, 100, 100); Cria uma caixa preta
+            // context.strokeRect(50, 50, 100, 100); Cria uma caixa com borda preta
+
+            // context.fillStyle = 'red'; // O style precisa ser definido antes do fillRect
+            // context.fillRect(50, 50, 100, 100);
+
+            // context.lineWidth = 3; // Determina a espessura da linha em pixels
+            // context.strokeStyle = 'blue';
+            // context.strokeRect(50, 50, 100, 100);
+
+
+            // Criando um path
+
+            // Apaga os desenhos anteriores
+            // context.beginPath();
+
+            // Desenha uma estrela
+            // context.moveTo(75, 250);
+            // context.lineTo(150, 50);
+            // context.lineTo(225, 250);
+            // context.lineTo(50, 120);
+            // context.lineTo(250, 120);
+            // context.lineTo(75, 250);
+
+            // Configura a linha
+            // context.lineWidth = 2;
+            // context.strokeStyle = 'red';
+
+            // Traça as linhas do caminho
+            // context.stroke();
+
+
+            // var imagem = new Image();
+            // imagem.src = './01/img/ovni.png';
+    
+            // imagem.onload = function () {
+            //     var x = 20;
+
+            //     for (let i = 0; i < 5; i++) {
+            //         context.drawImage(imagem, x, 20, 64, 32);
+            //         x += 70;
+            //     }
+            // }
+
+            // imagem.src = './01/img/explosao.png';
+            // imagem.onload = function () {
+            //     context.drawImage (
+            //         imagem,
+            //         80, 10, 60, 65,
+            //         20, 20, 60, 65
+            //     );
+            // }
+
+            context.fillStyle = 'green';
+            context.fillRect(50, 50, 25, 25);
+
+            context.save();
+
+            context.fillStyle = 'purple';
+            context.fillRect(100, 50, 25, 25);
+
+            context.restore();
+
+            context.fillRect(150, 50, 25, 25);
+   
+        }
+    </script>
+</body>
+</html>
