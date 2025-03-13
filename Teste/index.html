@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="teclado.js"></script>
+    <script src="player.js"></script>
+    <script src="animacao.js"></script>
+    <script src="spritesheet.js"></script>
+</head>
+<body>
+    <canvas id="meu_canvas" width="900" height="400" style="border: 1px solid black;"></canvas>
+    <script>
+        var canvas = document.getElementById('meu_canvas');
+        var context = canvas.getContext('2d');
+
+        var teclado = new Teclado(document);
+        var animacao = new Animacao(context);
+
+        var imgFrog = new Image();
+        imgFrog.src = './imgs/sprite_frog.png';
+
+        var frog = new Player(context, teclado, imgFrog);
+        frog.x = 0;
+        frog.y = 200;
+        animacao.novoSprite(frog);
+
+        imgFrog.onload = function () {
+            animacao.ligar();
+            console.log("Imagem Carregada!");
+        }
+    </script>
+</body>
+</html>
